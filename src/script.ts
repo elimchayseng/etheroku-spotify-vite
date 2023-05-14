@@ -134,8 +134,8 @@ function buildTables(topTracks: any[],recentTracks: any[]){
   });
 
 const outputDiv1 = document.getElementById('topTable');
-outputDiv1.innerHTML = '';
-outputDiv1.appendChild(topTable);
+outputDiv1!.innerHTML = '';
+outputDiv1!.appendChild(topTable);
   
 // Create the Table for Recent Tracks 
 const recentTable = document.createElement('table');
@@ -162,8 +162,8 @@ recentTable.appendChild(headerRow2);
 
 // recent table
 const outputDiv2 = document.getElementById('recentTable');
-outputDiv2.innerHTML = '';
-outputDiv2.appendChild(recentTable);
+outputDiv2!.innerHTML = '';
+outputDiv2!.appendChild(recentTable);
 }
 
 /// Populates the HTML elements for the Profile information
