@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Recent and Top Spotify Songs</title>
+  
+  
+  <script type="module" crossorigin src="/assets/index-efa6fdcb.js"></script>
+  <link rel="stylesheet" href="/assets/index-7072527f.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Display your Spotify profile data</h1>
+  </header>
+
+  <main>
+    <section id="profile">
+      <h2>Logged in as <span id="displayName"></span></h2>
+      <div id="avatar"></div>
+      <ul>
+        <li>User ID: <span id="id"></span></li>
+        <li>Email: <span id="email"></span></li>
+        <li>Spotify URI: <a id="uri" href="#"></a></li>
+        <li>Link: <a id="url" href="#"></a></li>
+        <li>Profile Image: <span id="imgUrl"></span></li>
+      </ul>
+    </section>
+
+    <section id="top-tracks">
+      <h2>Top 30 Tracks</h2>
+      <div id="topTable">
+        <table class="my-table">
+          ...
+        </table>
+      </div>
+    </section>
+
+    <section id="recent-tracks">
+      <h2>Recent 30 Tracks</h2>
+      <div id="recentTable">
+        <table class="my-table">
+          ...
+        </table>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
