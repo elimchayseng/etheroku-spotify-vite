@@ -1,1 +1,1 @@
-web: npm install --production && npm run preview
+web: npm install --production && npm run serve-heroku
