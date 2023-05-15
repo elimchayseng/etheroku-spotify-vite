@@ -1,4 +1,4 @@
-const devState = true;
+const devState = false;
 export async function redirectToAuthCodeFlow(clientId: string) {
     const verifier = generateCodeVerifier(128);
     const challenge = await generateCodeChallenge(verifier);
