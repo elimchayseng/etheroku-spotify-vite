@@ -10,12 +10,9 @@
     "postinstall": "npm run build",
     "serve-heroku": "vite --host 0.0.0.0 --port $PORT preview"
   },
-  "devDependencies": {
-    
-  },
   "dependencies": {
-    "vite": "^4.3.2",
-    "typescript": "^5.0.2"
+    "redis": "^4.6.6",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
   }
-
 }
