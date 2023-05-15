@@ -6,11 +6,27 @@
   <title>Recent and Top Spotify Songs</title>
   <link rel="stylesheet" href="src/style.css">
   <script src="src/script.ts" type="module"></script>
+  <style>
+    #spotify-login-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
   <main>
+    <section id="landing-page">
+      <h2 style="text-align: center; font-weight: bold; font-size: 60px;">Please Login to Begin ↗ </h2>
+    </section>
+
+    <button id="spotify-login-button">Log in with Spotify</button>
+
+
     <section id="profile">
       <h2>Logged in as <span id="displayName"></span></h2>
       <div id="avatar"></div>
