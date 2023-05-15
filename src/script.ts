@@ -211,16 +211,16 @@ function findMatches(topTracks: matchTrack[], recentTracks: matchTrack[]): match
 
 const spotifyLoginButton = document.getElementById('spotify-login-button');
 const welcomeMessage = document.getElementById('landing-page');
-spotifyLoginButton.addEventListener('click', async () => {
+spotifyLoginButton!.addEventListener('click', async () => {
   console.log("CLICK")
   console.log(code);
   await redirectToAuthCodeFlow(clientId);
-  const accessToken = await getAccessToken(clientId, code);
+  const accessToken = await getAccessToken(clientId, code!);
   const profile = await fetchProfile(accessToken);
   if (profile) {
     // Remove the login button
-    spotifyLoginButton.remove();
-    welcomeMessage.remove();
+    spotifyLoginButton!.remove();
+    welcomeMessage!.remove();
 
   }
   populateUI(profile);
@@ -233,19 +233,19 @@ spotifyLoginButton.addEventListener('click', async () => {
 
 if (!code) {
   // Display the login button
-  document.body.appendChild(spotifyLoginButton);
+  document.body.appendChild(spotifyLoginButton!);
 } else {
   // Code is already present, execute the other functions directly
   await executeMainFlow();
 }
 
 async function executeMainFlow() {
-  const accessToken = await getAccessToken(clientId, code);
+  const accessToken = await getAccessToken(clientId, code!);
   const profile = await fetchProfile(accessToken);
   if (profile) {
     // Remove the login button
-    spotifyLoginButton.remove();
-    welcomeMessage.remove();
+    spotifyLoginButton!.remove();
+    welcomeMessage!.remove();
   }
   populateUI(profile);
   const tables = await fetchRecentTrack(accessToken);
