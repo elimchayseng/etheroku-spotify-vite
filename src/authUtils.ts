@@ -11,7 +11,7 @@ export async function redirectToAuthCodeFlow(clientId: string) {
     if (devState){
       params.append("redirect_uri", "http://127.0.0.1:5173/callback");
     }else { 
-      params.append("redirect_uri", "https://etheroku-spotify-vite.herokuapp.com/callback");
+      params.append("redirect_uri", "https://etheroku-spotify-vite.vercel.app/callback");
     }
     params.append("scope", "user-read-private user-read-email user-read-recently-played user-top-read");
     params.append("code_challenge_method", "S256");
