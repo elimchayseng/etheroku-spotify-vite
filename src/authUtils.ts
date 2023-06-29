@@ -49,7 +49,7 @@ export async function getAccessToken(clientId: string, code: string): Promise<st
     if (devState){
       params.append("redirect_uri", "http://127.0.0.1:5173/callback");
     }else { 
-      params.append("redirect_uri", "https://etheroku-spotify-vite.herokuapp.com/callback");
+      params.append("redirect_uri", "https://etheroku-spotify-vite.vercel.app/callback");
     }
     params.append("code_verifier", verifier!);
 
